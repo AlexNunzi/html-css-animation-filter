@@ -1,0 +1,198 @@
+/* N1 */
+
+.ex-1-square{
+    transition: background-color 3s linear;
+}
+
+.ex-1-square:hover{
+    background-color: #FF0000;
+}
+
+/* N2 */
+
+.ex-2-square{
+    transition: width 5s linear;
+}
+
+.ex-2-square:active{
+    width: 100%;
+}
+
+/* N3 */
+
+.ex-3-square{
+    transition: border-radius 1.5s linear;
+}
+
+.ex-3-square:hover{
+    border-radius: 50%;
+}
+
+/* N4 */
+
+.ex-4-square{
+    transition: opacity 1.5s linear;
+}
+
+.ex-4-square:hover{
+    opacity: 0;
+}
+
+/* N5 */
+
+.ex-5-square{
+    /* transition: transform 1.5s; */
+}
+
+.ex-5-square:hover{
+    transform: scale(2);
+}
+
+.ex-5-square:active{
+    transform: scale(0.5);
+}
+
+/* N6 */
+
+.ex-6-img:hover{
+    filter: grayscale(100%);
+}
+
+
+/* N7 */
+
+.ex-7-img{
+    transition: filter 2s linear;
+}
+
+
+.ex-7-img:hover{
+    filter: grayscale(100%) opacity(50%);
+}
+
+/* N8 */
+
+.ex-8-img{
+    transition: filter 2s linear, border-radius 4s linear;
+}
+
+
+.ex-8-img:hover{
+    filter: sepia(100%) blur(3px);
+    border-radius: 20px;
+}
+
+/* N9 */
+
+.ex-9-img{
+    transition: filter 2s, border-radius 4s linear, transform 4s;
+}
+
+
+.ex-9-img:hover{
+    filter: saturate(20%) invert(5%);
+    border-radius: 20px;
+    transform: scale(1.5);
+}
+
+/* N10 */
+
+@keyframes rotation {
+    0% {
+        transform: rotate(360deg);
+    }
+    25% {
+        transform: rotate(270deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.ex-10-icon{
+    animation: rotation 2s infinite linear;
+}
+
+/* N11 */
+
+@keyframes rotation3_4 {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+
+.ex-11-icon:hover{
+    animation: rotation3_4 2s infinite linear;
+}
+
+/* N12 */
+
+@keyframes horizontal-right {
+    0% {
+        bottom: -10px;
+        right: 20%;
+    }
+    25% {
+        bottom: -10px;
+        right: calc(100% - 60px);
+    }
+    100% {
+        bottom: -10px;
+        right: 20%;
+    }
+}
+
+@keyframes horizontal-left {
+    0% {
+        top: -10px;
+        left: 10%;
+    }
+    25% {
+        top: -10px;
+        left: calc(100% - 60px);
+    }
+    100% {
+        top: -10px;
+        left: 10%;
+    }
+}
+
+.ex-12-button{
+    position: relative;
+}
+
+.ex-12-top-white{
+    position: absolute;
+}
+
+.ex-12-button:hover .ex-12-top-white{
+    animation: horizontal-left 4s linear;
+}
+
+.ex-12-bottom-white{
+    position: absolute;
+}
+
+.ex-12-button:hover .ex-12-bottom-white{
+    animation: horizontal-right 4s linear;
+}
+    
